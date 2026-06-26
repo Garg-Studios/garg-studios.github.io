@@ -1,0 +1,27 @@
+/*TODO: Add Horizon custom font and make .title use it*/
+
+/* All */
+* {
+    color: white;
+}
+
+/* Elements */
+
+/* Classes */
+.title {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: white;
+}
+
+.headinginfo {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: white;
+}
+
+/* ID */
+
+
