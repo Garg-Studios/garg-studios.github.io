@@ -9,7 +9,7 @@
 }
 
 @font-face {
-    font-family: 'Horizon';
+    font-family: 'Horizon Outlined';
     src: url('../Assets/Fonts/Horizon-Font/Horizon_Outlined.woff2') format('woff2');
 }
 
@@ -32,6 +32,13 @@
     font-style: italic;
 }
 
+@font-face {
+    font-family: 'Roboto Condensed';
+    src: url('../Assets/Fonts/Roboto_Condensed/static/RobotoCondensed-BoldItalic.ttf') format('truetype');
+    font-style: italic;
+    font-weight: bold;
+}
+
 
 
 /* STYLE */
@@ -41,8 +48,6 @@
 * {
     color: white;
 }
-
-
 
 
 /* Elements */
@@ -56,7 +61,7 @@ body {
 
 .projectcontainer {
     border: white 4px solid;
-    padding: 30px;
+    padding: 10px 30px 30px 30px;
     border-radius: 10px;
 }
 
@@ -74,12 +79,49 @@ body {
     flex-direction: column;
     align-items: center;
     color: white;
+    font-family: 'Horizon Outlined', "Georgia", serif;
 }
 
 .masterprojectcontainer {
     display: flex;
     align-items: center;
     justify-content: center;
+}
+
+.projectname {
+    font-family: "Roboto Condensed", "Georgia", serif;
+    font-style: italic;
+    font-weight: bold;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-size: 150%;
+}
+
+.projectinfo {
+    font-family: "Roboto Condensed", "Georgia", serif;
+    font-style: italic;
+    font-size: 18px;
+}
+
+.link {
+    font-family: "Roboto Condensed", "Georgia", serif;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-style: italic;
+    width: 10%;
+}
+
+.img {
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    height: 10%;
+    width: 100%;
+
 }
 
 /* ID */
