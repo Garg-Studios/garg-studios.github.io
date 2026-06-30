@@ -103,6 +103,8 @@ a {
     font-size: 150%;
 }
 
+
+
 .projectinfo {
     font-family: "Roboto Condensed", "Georgia", serif;
     font-style: italic;
@@ -117,6 +119,10 @@ a {
     align-items: center;
     font-style: italic;
     width: 10%;
+}
+
+.notextdecoration {
+    text-decoration: none;
 }
 
 .img {
