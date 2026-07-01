@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Exchange Bot Documentation</title>
+    <link rel="stylesheet" href="../Static/Style/style.css">
+    <link rel="icon" href="../Static/Assets/Images/exchangeBotIcon.png">
+</head>
+<body>
+  <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js" async></script>
+  <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js" async></script>
+  <header>
+    <a href="index.html"><ion-icon name="home" class="houseionicon"></ion-icon></a>
+    <section>
+      <h1 class="title">Exchange Bot Documentation</h1>
+      <p class="projectinfo centered">This page showcases all commands built into Exchange Bot</p>
+    </section>
+  </header>
+  <main>
+    <section class="masterprojectcontainer">
+      <article class="projectcontainer">
+        <div class="project">
+          <h3 class="projectname">Core Commands</h3>
+          <ul class="projectinfo">
+            <li>Check a stock ticker: <code>/checkstock</code></li>
+            <li>Check a cryptocurrency: <code>/checkcrypto</code></li>
+            <li>Check a currency exchange rate: <code>/convertcurrency</code></li>
+            <li>Contact Garg Studios about an issue: <code>/help</code></li>
+            <li>Check Exchange Bot Updates: <code>/update</code></li>
+            <li>Check if the bot is online with a simple <code>/ping</code></li>
+          </ul>
+        </div>
+      </article>
+      <article class="projectcontainer">
+        <div class="project">
+          <h3 class="projectname">/checkstock</h3>
+          <p class="projectinfo">Parameters:</p>
+          <ul class="projectinfo">
+            <li>Ticker: this is the stock symbol which will be checked (e.g., GOOG, APPL, AMZN)</li>
+          </ul>
+          <p class="projectinfo">Returns:</p>
+          <ul class="projectinfo">
+            <li>Company Name</li>
+            <li>Stock Price</li>
+            <li>Exchange</li>
+            <li>52-Week Range</li>
+            <li>1-Day Range</li>
+          </ul>
+          <p class="projectinfo">This command queries the Yahoo Finance API at <code>query1.finance.yahoo.com/v8/finance/chart/{TICKER}</code></p>
+          <p class="projectinfo">Inputted Text: <code>/checkstock ticker: AAPL</code></p>
+          <img src="../Static/Assets/Images/checkstockexample.png" alt="Check stock command example" class="discordphoto">
+          <p class="projectinfo">Inputted Text: <code>/checkstock ticker: RANDD</code></p>
+          <img src="../Static/Assets/Images/checkstockerror.png" alt="Check stock command error example" class="discordphoto">
+          <p class="projectinfo">This error is caused by a particular stock symbol not being found by the API</p>
+
+        </div>
+      </article>
+
+      <article class="projectcontainer">
+        <div class="project">
+          <h3 class="projectname">/checkcrypto</h3>
+          <p class="projectinfo">Parameters:</p>
+          <ul class="projectinfo">
+            <li>Crypto: This is the Crypto Symbol (e.g., BTC, ETH, SOL)</li>
+          </ul>
+          <p class="projectinfo">Returns:</p>
+          <ul class="projectinfo">
+            <li>Price</li>
+          </ul>
+          <p class="projectinfo">This command queries the Kraken API at <code>api.kraken.com/0/public/Ticker?pair={api_ticker}USD</code>. However, before this, the ticker is modified by the program to make it readable by the Kraken API. Check the GitHub Repo for more information.</p>
+          <p class="projectinfo">Inputted Text: <code>/checkcrypto crypto: BTC</code></p>
+          <img src="../Static/Assets/Images/checkcryptoexample.png" alt="Check crypto command example" class="discordphoto">
+          <p class="projectinfo">Errors</p>
+          <p class="projectinfo">Inputted Text: <code>/checkcrypto crypto: ASDFE</code></p>
+          <img src="../Static/Assets/Images/cryptoerror.png" alt="Check crypto command example" class="discordphoto">
+          <p class="projectinfo">This error is caused by a particular crypto symbol not being found in Kraken</p>
+        </div>
+      </article>
+
+      <article class="projectcontainer">
+        <div class="project">
+          <h3 class="projectname">/convertcurrency</h3>
+          <p class="projectinfo">Parameters:</p>
+          <ul class="projectinfo">
+            <li>Currency 1: This is the currency you are converting from</li>
+            <li>Amount: This is the amount of money you are converting</li>
+            <li>Currency 2: This is the currency you are converting to</li>
+          </ul>
+          <p class="projectinfo">Returns:</p>
+          <ul class="projectinfo">
+            <li>Your Specified Currency</li>
+            <li>British Pound</li>
+            <li>Euro</li>
+            <li>American Dollar</li>
+            <li>Japanese Yen</li>
+            <li>Indian Rupee</li>
+            <li>The date that the exchange rates were last updated on</li>
+          </ul>
+          <p class="projectinfo">This command queries the Frankfurter API at <code>api.frankfurter.dev/v1/latest?base={currency}</code></p>
+          <p class="projectinfo">Inputted Text: <code>/convertcurrency currency1: USD currencyamount: 1 currency2: CNY</code></p>
+          <img src="../Static/Assets/Images/convertcurrencyexample.png" alt="Convert Currency command example" class="discordphoto">
+          <p class="projectinfo">Errors</p>
+          <p class="projectinfo">Inputted Text: <code>/convertcurrency currency1: RRTR currencyamount: 1 currency2: USD</code></p>
+          <img src="../Static/Assets/Images/convertcurrencyerrorunabletoconnecttoserver.png" alt="Convert Currency error example" class="discordphoto">
+          <p class="projectinfo">This error happens when the first or both currency parameters are invalid. Since the API requires the currency to be embedded, an invalid first currency will cause this error.</p>
+          <p class="projectinfo">Inputted Text: <code>/convertcurrency currency1: USD currencyamount: 1 currency2: RIRR</code></p>
+          <img src="../Static/Assets/Images/exchangeboterrorsomethingwentwrong.png" alt="Convert currency error" class="discordphoto">
+          <p class="projectinfo">This error happens when the first currency is valid but the second is not. This error indicates the API was able to return a JSON file, but it could not parse the JSON file with the key provided.</p>
+        </div>
+      </article>
+
+
+      <article class="projectcontainer">
+        <div class="project">
+          <h3 class="projectname">/update</h3>
+          <p class="projectinfo">Parameters:</p>
+          <ul class="projectinfo">
+            <li>This command does not take any parameters</li>
+          </ul>
+          <p class="projectinfo">Returns:</p>
+          <ul class="projectinfo">
+            <li>The Update Log for Exchange Bot</li>
+          </ul>
+          <p class="projectinfo">This command returns a hardcoded string (will be changed to this website later)</p>
+          <p class="projectinfo">Inputted Text: <code>/update</code></p>
+          <img src="../Static/Assets/Images/updateexample.png" alt="Update command example " class="discordphoto">
+        </div>
+      </article>
+
+      <article class="projectcontainer">
+        <div class="project">
+          <h3 class="projectname">/help</h3>
+          <p class="projectinfo">Parameters:</p>
+          <ul class="projectinfo">
+            <li>This command does not take any parameters</li>
+          </ul>
+          <p class="projectinfo">Returns:</p>
+          <ul class="projectinfo">
+            <li>An email they can contact if they have a report or issue with Exchange Bot</li>
+            <li>Our Website</li>
+          </ul>
+          <p class="projectinfo">This command returns a hardcoded string (will be changed to this website later)</p>
+          <p class="projectinfo">Inputted Text: <code>/help</code></p>
+          <img src="../Static/Assets/Images/updateexample.png" alt="Update command example " class="discordphoto">
+        </div>
+      </article>
+
+      <article class="projectcontainer">
+        <div class="project">
+          <h3 class="projectname">/ping</h3>
+          <p class="projectinfo centered">Note: currently, this command does not show ping response time. This will be fixed in a future update</p>
+          <p class="projectinfo">Parameters:</p>
+          <ul class="projectinfo">
+            <li>This command does not take any parameters</li>
+          </ul>
+          <p class="projectinfo">Returns:</p>
+          <ul class="projectinfo">
+            <li>Pong!</li>
+          </ul>
+          <p class="projectinfo">The command returns the string "Pong!"</p>
+          <p class="projectinfo">Inputted Text: <code>/ping</code></p>
+          <img src="../Static/Assets/Images/pingexample.png" alt="Update command example " class="discordphoto">
+        </div>
+      </article>
+
+    </section>
+  </main>
+</body>
+</html>
