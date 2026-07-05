@@ -1,5 +1,5 @@
 <h1>Garg Studios™ Website</h1>
-<img src="Static/Assets/Images/favicon.png" style="width: 15%; height: 15%;">
+<img src="Static/Assets/Images/favicon.png" style="width: 25%; height: 25%;">
 
 > The Garg Studios™ Official Website
 
