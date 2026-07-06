@@ -25,6 +25,7 @@
 <ol>
   <li>Hyper Text Markup Language (HTML): Used for the main structure of the website</li>
   <li>Cascading Style Sheets (CSS): Used for styling effects</li>
+  <li>JavaScript (JS): Used for interactive actions such as a copy button</li>
 </ol>
 
 > [!NOTE]
