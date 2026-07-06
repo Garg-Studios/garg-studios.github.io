@@ -50,4 +50,6 @@
   <li>See the project <a href="LICENSE.md">license</a></li>
   <li>Before contributing, read <a href="CONTRIBUTE.md">CONTRIBUTE.md</a></li>
   <li>Read our <a href="CODE_OF_CONDUCT.md">Code of Conduct</a></li>
+  <li>Read our <a href="PRIVACY.md">Privacy Policy</a></li>
+  <li>See the project <a href="TOS.md">Terms of Service</a></li>
 </ul>
