@@ -43,7 +43,7 @@
 
 
 <h2>Visit</h2>
-<p>URL: <a href="garg-studios.github.io">garg-studios.github.io</a></p>
+<p>URL: <a href="https://garg-studios.github.io">garg-studios.github.io</a></p>
 
 <h2>Legal and Guidelines</h2>
 <ul>
