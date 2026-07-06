@@ -60,6 +60,10 @@ a {
     text-decoration: none;
 }
 
+button {
+    cursor: pointer;
+}
+
 
 /* Classes */
 
@@ -192,6 +196,21 @@ a {
     height: 80%;
 }
 
+.urlcontainer {
+    background-color: black !important;
+    border: 2.5px solid white !important;
+    padding: 5px;
+}
+
+.url {
+    color: white !important;
+    padding: 5px;
+}
+
+.copysymbol:hover {
+    padding: 5px;
+    background-color: grey !important;
+}
 
 /* ID */
 
