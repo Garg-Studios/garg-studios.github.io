@@ -66,18 +66,12 @@ button {
 
 /* Classes */
 
-.masterprojectcontainer > a {
-    display: block;
-    width: 100%;
-}
-
 .projectcontainer {
     border: white 4px solid;
     padding: 10px 30px 30px 30px;
     border-radius: 10px;
-    margin: 0 auto 15px;
-    width: 90%;
-    box-sizing: border-box;
+    margin-bottom: 15px;
+    width: 100vh;
 }
 
 
@@ -99,7 +93,7 @@ button {
 
 .masterprojectcontainer {
     display: flex;
-    align-items: stretch;
+    align-items: center;
     justify-content: center;
     flex-direction: column;
 }
@@ -152,8 +146,8 @@ button {
 }
 
 .githublogo {
-    width: 28px;
-    height: 28px;
+    width: 3%;
+    height: 3%;
 }
 
 .notcentered {
@@ -184,8 +178,8 @@ button {
 }
 
 .gargStudiosLogo {
-    width: 32px;
-    height: 32px;
+    width: 3.5%;
+    height: 3.5%;
     margin: 0px;
 }
 
@@ -215,6 +209,35 @@ button {
 .copysymbol:hover {
     padding: 5px;
     background-color: grey !important;
+}
+
+/* MOBILE (desktop styles above are unchanged from original) */
+
+@media (max-width: 768px) {
+    .masterprojectcontainer {
+        align-items: stretch;
+    }
+
+    .masterprojectcontainer > a {
+        display: block;
+        width: 100%;
+    }
+
+    .projectcontainer {
+        width: 90%;
+        margin: 0 auto 15px;
+        box-sizing: border-box;
+    }
+
+    .githublogo {
+        width: 3.5vh;
+        height: 3.5vh;
+    }
+
+    .gargStudiosLogo {
+        width: 5vh;
+        height: 5vh;
+    }
 }
 
 /* ID */
