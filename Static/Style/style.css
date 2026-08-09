@@ -211,7 +211,7 @@ button {
     background-color: grey !important;
 }
 
-/* MOBILE (desktop styles above are unchanged from original) */
+/* MOBILE ONLY */
 
 @media (max-width: 768px) {
     .masterprojectcontainer {
@@ -224,8 +224,8 @@ button {
     }
 
     .projectcontainer {
-        width: 90%;
-        margin: 0 auto 15px;
+        width: 100%;
+        margin: 0 0 15px;
         box-sizing: border-box;
     }
 
@@ -237,6 +237,7 @@ button {
     .gargStudiosLogo {
         width: 5vh;
         height: 5vh;
+        align-self: flex-start;
     }
 }
 
