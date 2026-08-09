@@ -214,6 +214,10 @@ button {
 /* MOBILE ONLY */
 
 @media (max-width: 768px) {
+    body {
+        margin: 0;
+    }
+
     .masterprojectcontainer {
         align-items: stretch;
     }
@@ -234,10 +238,17 @@ button {
         height: 3.5vh;
     }
 
+    header {
+        position: relative;
+    }
+
     .gargStudiosLogo {
+        position: absolute;
+        top: 10px;
+        right: 10px;
         width: 5vh;
         height: 5vh;
-        align-self: flex-start;
+        margin: 0;
     }
 }
 
