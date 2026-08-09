@@ -70,9 +70,10 @@ button {
     border: white 4px solid;
     padding: 10px 30px 30px 30px;
     border-radius: 10px;
-    margin-bottom: 15px;
+    margin: 0 auto 15px;
     width: 90%;
     max-width: 700px;
+    box-sizing: border-box;
 }
 
 
@@ -94,7 +95,7 @@ button {
 
 .masterprojectcontainer {
     display: flex;
-    align-items: center;
+    align-items: stretch;
     justify-content: center;
     flex-direction: column;
 }
@@ -147,8 +148,8 @@ button {
 }
 
 .githublogo {
-    width: 3%;
-    height: 3%;
+    width: 28px;
+    height: 28px;
 }
 
 .notcentered {
@@ -179,8 +180,8 @@ button {
 }
 
 .gargStudiosLogo {
-    width: 3.5%;
-    height: 3.5%;
+    width: 32px;
+    height: 32px;
     margin: 0px;
 }
 
