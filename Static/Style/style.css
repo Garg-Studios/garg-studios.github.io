@@ -66,13 +66,17 @@ button {
 
 /* Classes */
 
+.masterprojectcontainer > a {
+    display: block;
+    width: 100%;
+}
+
 .projectcontainer {
     border: white 4px solid;
     padding: 10px 30px 30px 30px;
     border-radius: 10px;
     margin: 0 auto 15px;
     width: 90%;
-    max-width: 700px;
     box-sizing: border-box;
 }
 
