@@ -211,7 +211,7 @@ button {
     background-color: grey !important;
 }
 
-/* MOBILE ONLY */
+/* MOBILE ONLY CSS*/
 
 @media (max-width: 768px) {
     body {
