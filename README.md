@@ -1,5 +1,5 @@
 <h1>Penguin Development™ Website</h1>
-<img src="Static/Assets/Images/logo.png" style="width: 25%; height: 25%;">
+<img src="Static/Assets/Images/logo.png?v=3" style="width: 25%; height: 25%; display: block;">
 
 > The Penguin Development™ Official Website
 
