@@ -33,6 +33,8 @@ This has repeatedly caught the real culprit when a fix "didn't work" — it almo
 
 **Every `<link rel="stylesheet">` tag points to `Static/Style/style.css?v=2`.** This query string exists specifically to prevent a worse variant of the caching problem: a browser serving *stale CSS* alongside a *freshly-loaded HTML page*. That combination once caused a real production incident — HTML had been renamed to a new CSS class (`.penguinDevelopmentLogo`) but a visitor's cached CSS still only had the old class name, so the logo `<img>` matched no rule at all and rendered at its native 1024×1024 size, blowing up the whole layout. Bumping the version number forces browsers to fetch new CSS as a completely different URL rather than reusing anything stale. **Bump this number (`?v=2` → `?v=3` etc.) across all 15 HTML files whenever `style.css` changes** — grep for `style\.css\?v=` to find every occurrence.
 
+The same applies to `Static/Assets/Images/logo.png`: every `<link rel="icon">` and header `<img src>` that references it also carries a `?v=2` query string, bumped whenever the image file's *contents* change while keeping the same filename (as happened once already — the file was swapped in place). Grep for `logo\.png\?v=` to find every occurrence (10 pages, 2 references each: favicon + header image).
+
 ## CSS conventions — read before touching `style.css`
 
 The stylesheet is one file, and it deliberately has two zones:
