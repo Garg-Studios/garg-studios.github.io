@@ -31,6 +31,8 @@ gh run list --limit 3
 ```
 This has repeatedly caught the real culprit when a fix "didn't work" — it almost always had, and the browser (especially mobile Safari, but Chrome too) was just serving a stale cached copy of the CSS. Before concluding a pushed fix is broken, rule out client-side caching first: confirm the live file via `curl`, and if it's correct, tell the user to hard-refresh or use a private/incognito tab rather than re-diagnosing a CSS bug that isn't there.
 
+**Every `<link rel="stylesheet">` tag points to `Static/Style/style.css?v=2`.** This query string exists specifically to prevent a worse variant of the caching problem: a browser serving *stale CSS* alongside a *freshly-loaded HTML page*. That combination once caused a real production incident — HTML had been renamed to a new CSS class (`.penguinDevelopmentLogo`) but a visitor's cached CSS still only had the old class name, so the logo `<img>` matched no rule at all and rendered at its native 1024×1024 size, blowing up the whole layout. Bumping the version number forces browsers to fetch new CSS as a completely different URL rather than reusing anything stale. **Bump this number (`?v=2` → `?v=3` etc.) across all 15 HTML files whenever `style.css` changes** — grep for `style\.css\?v=` to find every occurrence.
+
 ## CSS conventions — read before touching `style.css`
 
 The stylesheet is one file, and it deliberately has two zones:
