@@ -1,4 +1,4 @@
-Required Notice: Copyright 2026 Garg Studios and @littlemastercoder (gargstudios@protonmail.com)
+Required Notice: Copyright 2026 Penguin Development and @littlemastercoder (penguindevelopmentadmin@gmail.com)
 
 # PolyForm Noncommercial License 1.0.0
 
@@ -37,7 +37,7 @@ URL for them above, as well as copies of any plain-text lines
 beginning with `Required Notice:` that the licensor provided
 with the software.  For example:
 
-> Required Notice: Copyright Garg Studios and @littlemastercoder (gargstudios@protonmail.com)
+> Required Notice: Copyright Penguin Development and @littlemastercoder (penguindevelopmentadmin@gmail.com)
 
 ## Changes and New Works License
 

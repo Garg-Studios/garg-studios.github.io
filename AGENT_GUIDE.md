@@ -1,10 +1,10 @@
-# Agent Guide — Garg Studios Website
+# Agent Guide — Penguin Development Website
 
 Detailed reference for working in this repo. `CLAUDE.md` has the quick-glance version; this file has the reasoning behind it.
 
 ## What this is
 
-A static marketing/portfolio site for Garg Studios, served directly from GitHub Pages at [garg-studios.github.io](https://garg-studios.github.io). Plain HTML/CSS/JS — no framework, no bundler, no `package.json`, no build step. What's in the repo is byte-for-byte what gets served.
+A static marketing/portfolio site for Penguin Development, served directly from GitHub Pages at [penguindevelopment-official.github.io](https://penguindevelopment-official.github.io). Plain HTML/CSS/JS — no framework, no bundler, no `package.json`, no build step. What's in the repo is byte-for-byte what gets served.
 
 ## Structure
 
@@ -20,13 +20,13 @@ Every HTML page follows the same skeleton: `<meta charset>`, `<meta name="viewpo
 
 Pushing to `main` deploys automatically — GitHub Pages rebuilds in well under a minute (confirm with `gh run list --limit 3`, look for a fresh `pages-build-deployment` run). There's no Jekyll processing happening in practice (no `_config.yml` / `.nojekyll`, verified the live HTML is identical to the repo copy) — files are served as-is.
 
-The repo's canonical location is now `Garg-Studios/garg-studios.github.io` (renamed from `garg-studios/...`); the old `origin` remote URL still works via GitHub's redirect, no need to update it.
+The repo's canonical location is `penguindevelopment-official/penguindevelopment-official.github.io` (transferred from the `Garg-Studios` org, which no longer exists). Unlike an in-org rename, an ownership transfer to a different org does **not** redirect the old GitHub Pages domain — `garg-studios.github.io` now 404s outright, so any references to it need to be updated by hand, not left to a redirect. Individual repo paths (e.g. `github.com/<old-org>/<repo>`) do still redirect via GitHub's rename tracking, but the `<owner>.github.io` Pages hostname does not, since it's tied to the org identity itself. The local `origin` remote was updated to `https://github.com/penguindevelopment-official/penguindevelopment-official.github.io.git` after the transfer.
 
 Branch protection on `main` requires PRs, but the repo owner has bypass rights, so direct pushes succeed — `git push` will print a "Bypassed rule violations" notice, which is expected and not an error. Still, treat `main` as production: confirm with the user before pushing, since every push is a live deploy.
 
 **Always verify a deploy landed by fetching the live file, not just by pushing:**
 ```bash
-curl -s "https://garg-studios.github.io/Static/Style/style.css" | grep -A5 ".some-rule {"
+curl -s "https://penguindevelopment-official.github.io/Static/Style/style.css" | grep -A5 ".some-rule {"
 gh run list --limit 3
 ```
 This has repeatedly caught the real culprit when a fix "didn't work" — it almost always had, and the browser (especially mobile Safari, but Chrome too) was just serving a stale cached copy of the CSS. Before concluding a pushed fix is broken, rule out client-side caching first: confirm the live file via `curl`, and if it's correct, tell the user to hard-refresh or use a private/incognito tab rather than re-diagnosing a CSS bug that isn't there.

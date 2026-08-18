@@ -1,6 +1,6 @@
 # CLAUDE.md
 
-Static HTML/CSS/JS site for Garg Studios, deployed via GitHub Pages at [garg-studios.github.io](https://garg-studios.github.io). No framework, no build step, no package manager — what's committed is what's served.
+Static HTML/CSS/JS site for Penguin Development, deployed via GitHub Pages at [penguindevelopment-official.github.io](https://penguindevelopment-official.github.io). No framework, no build step, no package manager — what's committed is what's served.
 
 **Read [AGENT_GUIDE.md](AGENT_GUIDE.md) before making non-trivial changes.** It has the full reasoning; this file is just the fast-reference version.
 

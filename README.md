@@ -1,7 +1,7 @@
-<h1>Garg Studios™ Website</h1>
-<img src="Static/Assets/Images/favicon.png" style="width: 25%; height: 25%;">
+<h1>Penguin Development™ Website</h1>
+<img src="Static/Assets/Images/logo.png" style="width: 25%; height: 25%;">
 
-> The Garg Studios™ Official Website
+> The Penguin Development™ Official Website
 
 
 <h2>Content</h2>
@@ -43,7 +43,7 @@
 
 
 <h2>Visit</h2>
-<p>URL: <a href="https://garg-studios.github.io">garg-studios.github.io</a></p>
+<p>URL: <a href="https://penguindevelopment-official.github.io">penguindevelopment-official.github.io</a></p>
 
 <h2>Legal and Guidelines</h2>
 <ul>
