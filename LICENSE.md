@@ -1,4 +1,4 @@
-Required Notice: Copyright 2026 Penguin Development and @littlemastercoder (penguindevelopmentadmin@gmail.com)
+Required Notice: Copyright 2026 Penguin Development and @milangarg-dev (penguindevelopmentadmin@gmail.com)
 
 # PolyForm Noncommercial License 1.0.0
 
