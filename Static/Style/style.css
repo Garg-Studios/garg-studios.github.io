@@ -250,16 +250,26 @@ header {
     }
 
     .penguinDevelopmentLogo {
-        width: 10vh;
-        height: 10vh;
+        position: static;
+        float: right;
+        width: min(10vh, 25vw);
+        height: min(10vh, 25vw);
+        margin: 10px 10px 10px 10px;
     }
 
     .title.containsimg {
-        padding-right: calc(10vh + 20px);
+        padding-right: 0;
+        text-align: left;
+    }
+
+    .title.containsimg::after {
+        content: "";
+        display: table;
+        clear: both;
     }
 
     .bigtext {
-        font-size: 7vw;
+        font-size: 5vw;
     }
 
     code {
