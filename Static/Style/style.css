@@ -70,8 +70,8 @@ button {
     border: white 4px solid;
     padding: 10px 30px 30px 30px;
     border-radius: 10px;
-    margin-bottom: 15px;
-    width: 90%;
+    margin: 0 auto 15px;
+    width: min(90%, 100vh);
 }
 
 
